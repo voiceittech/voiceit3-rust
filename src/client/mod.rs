@@ -16,10 +16,10 @@ pub struct VoiceIt2 {
 }
 
 impl VoiceIt2 {
-    pub fn new(api_key: &str, api_token: &str) -> VoiceIt2 {
+    pub fn new(api_key: String, api_token: String) -> VoiceIt2 {
         VoiceIt2 {
-            api_key: String::from(api_key),
-            api_token: String::from(api_token),
+            api_key: api_key,
+            api_token: api_token,
         }
     }
 
