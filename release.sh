@@ -1,6 +1,6 @@
 #!/bin/bash
 commit=$(git log -1 --pretty=%B | head -n 1)
-version=$(cargo search voiceit2 | cut -d \" -f2)
+version=$(echo $(cargo search voiceit2 | cut -d \" -f2) | tr "." "\n")
 set -- $version
 major=$1
 minor=$2
