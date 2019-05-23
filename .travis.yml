@@ -5,8 +5,6 @@ rust:
 before_script:
 script: cargo test -- --nocapture
 after_success:
-  - mkdir ~/.cargo
-  - cargo login $CRATESTOKEN
   - ./release.sh
 notifications:
   slack:

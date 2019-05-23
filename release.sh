@@ -1,6 +1,9 @@
 #!/bin/bash
 commit=$(git log -1 --pretty=%B | head -n 1)
-version=$(echo $(pip3 search voiceit2 | awk -F"[()]" '{print $2}') | tr "." "\n")
+
+cargo install cargo-show
+version=$(cargo show voiceit2)
+
 set -- $version
 major=$1
 minor=$2
@@ -63,6 +66,10 @@ then
   version=$major'.'$minor'.'$patch
   if [[ $wrapperplatformversion = $version ]];
   then
+
+
+    cargo login $CRATESTOKEN
+
 
     cargo package 1>&2
 
