@@ -9,7 +9,7 @@ documentation = "https://api.voiceit.io/?rust"
 homepage = "https://voiceit.io"
 repository = "https://github.com/voiceittech/VoiceIt2-Rust"
 readme = "README.md"
-keywords = ["biometrics", "voice", "api-wrapper", "face-recognition", "voice-recognition", "voiceit", "wrapper"]
+keywords = ["biometrics", "voice", "face-recognition", "voice-recognition", "voiceit"]
 license = "MIT"
 edition = "2018"
 
