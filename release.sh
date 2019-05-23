@@ -67,7 +67,6 @@ then
 
     cargo login $CRATESTOKEN
 
-
     cargo package 1>&2
 
     if [ "$?" != "0" ]
