@@ -6,7 +6,7 @@ before_script:
 script: cargo test -- --nocapture
 after_success:
   - mkdir ~/.cargo
-  - echo 'cargo login '$CRATESTOKEN > ~/.cargo/credentials
+  - cargo login $CRATESTOKEN
   - ./release.sh
 notifications:
   slack:

@@ -63,7 +63,8 @@ then
   version=$major'.'$minor'.'$patch
   if [[ $wrapperplatformversion = $version ]];
   then
-    python3 pypi.py $version 1>&2
+
+    cargo package 1>&2
 
     if [ "$?" != "0" ]
     then
@@ -72,7 +73,24 @@ then
         "username": "Release Wrapper Gate",
           "attachments": [
               {
-                  "text": "Packaging '$reponame' version '$version' failed.",
+                  "text": "Command `cargo package` for '$reponame' version '$version' failed.",
+                  "color": "danger"
+              }
+          ]
+      }' 'https://hooks.slack.com/services/'$SLACKPARAM1'/'$SLACKPARAM2'/'$SLACKPARAM3
+      exit 1
+    fi
+
+    cargo publish 1>&2
+
+    if [ "$?" != "0" ]
+    then
+      curl -X POST -H 'Content-type: application/json' --data '{
+        "icon_url": "https://s3.amazonaws.com/voiceit-api2-testing-files/test-data/TravisCI-Mascot-1.png",
+        "username": "Release Wrapper Gate",
+          "attachments": [
+              {
+                  "text": "Command `cargo publish` for '$reponame' version '$version' failed.",
                   "color": "danger"
               }
           ]
