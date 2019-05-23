@@ -1,9 +1,6 @@
 #!/bin/bash
 commit=$(git log -1 --pretty=%B | head -n 1)
-
-cargo install cargo-show
-version=$(cargo show voiceit2)
-
+version=$(cargo search voiceit2 | cut -d \" -f2)
 set -- $version
 major=$1
 minor=$2
