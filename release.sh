@@ -8,6 +8,7 @@ patch=$3
 wrapperplatformversion=$(cat ~/platformVersion)
 reponame=$(basename $(git remote get-url origin) | sed 's/.\{4\}$//')
 
+echo 'version='$version
 if [[ $commit = *"RELEASE"* ]];
 then
 
