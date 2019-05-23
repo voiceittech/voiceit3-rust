@@ -106,8 +106,8 @@ then
         formattedmessages=$formattedmessages'|'$i
       done
 
-      json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": "true", "instructions": "pip3 install --upgrade voiceit2</code></div><br />"}'
-      curl -X POST -H "Content-Type: application/json" -d $json "https://api.voiceit.io/platform/28"
+      json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": "docs", "instructions": "https://api.voiceit.io/?rust#introduction"}'
+      curl -X POST -H "Content-Type: application/json" -d $json "https://api.voiceit.io/platform/49"
     fi
     exit 0
 
