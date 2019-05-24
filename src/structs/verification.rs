@@ -6,24 +6,20 @@ use serde::{Deserialize, Serialize};
 pub struct VoiceVerificationReturn {
     pub message: String,
     pub status: u16,
-    pub confidence: f32,
     pub text: String,
     pub textConfidence: f32,
     pub timeTaken: String,
     pub responseCode: String,
-    pub userId: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct VoiceVerificationByUrlReturn {
     pub message: String,
     pub status: u16,
-    pub confidence: f32,
     pub text: String,
     pub textConfidence: f32,
     pub timeTaken: String,
     pub responseCode: String,
-    pub userId: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -33,7 +29,6 @@ pub struct FaceVerificationReturn {
     pub faceConfidence: f32,
     pub timeTaken: String,
     pub responseCode: String,
-    pub userId: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -43,7 +38,6 @@ pub struct FaceVerificationByUrlReturn {
     pub faceConfidence: f32,
     pub timeTaken: String,
     pub responseCode: String,
-    pub userId: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -56,7 +50,6 @@ pub struct VideoVerificationReturn {
     pub textConfidence: f32,
     pub timeTaken: String,
     pub responseCode: String,
-    pub userId: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -69,5 +62,4 @@ pub struct VideoVerificationByUrlReturn {
     pub textConfidence: f32,
     pub timeTaken: String,
     pub responseCode: String,
-    pub userId: String,
 }

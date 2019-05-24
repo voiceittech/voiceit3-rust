@@ -127,54 +127,6 @@ pub struct CreateVideoEnrollmentByUrlReturn {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct DeleteVoiceEnrollmentReturn {
-    pub message: String,
-    pub status: u16,
-    pub timeTaken: String,
-    pub responseCode: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct DeleteFaceEnrollmentReturn {
-    pub message: String,
-    pub status: u16,
-    pub timeTaken: String,
-    pub responseCode: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct DeleteVideoEnrollmentReturn {
-    pub message: String,
-    pub status: u16,
-    pub timeTaken: String,
-    pub responseCode: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct DeleteAllVoiceEnrollmentsReturn {
-    pub message: String,
-    pub status: u16,
-    pub timeTaken: String,
-    pub responseCode: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct DeleteAllFaceEnrollmentsReturn {
-    pub message: String,
-    pub status: u16,
-    pub timeTaken: String,
-    pub responseCode: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct DeleteAllVideoEnrollmentsReturn {
-    pub message: String,
-    pub status: u16,
-    pub timeTaken: String,
-    pub responseCode: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
 pub struct DeleteAllEnrollmentsReturn {
     pub message: String,
     pub status: u16,
