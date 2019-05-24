@@ -86,7 +86,7 @@ impl VoiceIt2 {
         Ok(body)
     }
 
-    pub fn check_if_user_exists(&self, user_id: &str) -> Result<String, VoiceItError> {
+    pub fn check_user_exists(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/users/{}{}",
             String::from(BASE_URL),

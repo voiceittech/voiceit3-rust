@@ -122,7 +122,7 @@ mod tests {
         assert!(crate::is_user_id(&user_id));
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::users::CheckUserExistsReturn = match &x.check_if_user_exists(&user_id) {
+        let result: crate::structs::users::CheckUserExistsReturn = match &x.check_user_exists(&user_id) {
                 Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
                 Err(err) => {
                     panic!("Panic error: {:?}", err);
