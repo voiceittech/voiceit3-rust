@@ -1,7 +1,6 @@
 <img src="./rust.png" width="100%" style="width:100%" />
 
-# VoiceIt2-Rust **[ALPHA]**
-<!-- [![travis]()]() -->
+# VoiceIt2-Rust **[ALPHA]**[![travis](https://travis-ci.org/voiceittech/VoiceIt2-Rust.svg?branch=master)](https://travis-ci.org/voiceittech/VoiceIt2-Rust.svg?branch=master)
 
 A Rust wrapper for VoiceIt's API 2.0 featuring Voice + Face Verification and Identification.
 
