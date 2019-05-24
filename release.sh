@@ -102,6 +102,24 @@ then
       exit 1
     fi
 
+
+    curl -u $GITHUBUSERNAME:$GITHUBPASSWORD -H "Content-Type: application/json" --request POST --data '{"tag_name": "'$version'", "target_commitish": "master", "name": "'$version'", "body": "", "draft": false, "prerelease": false}' https://api.github.com/repos/voiceittech/VoiceIt2-Rust/releases &> /dev/null
+    if [ "$?" != "0" ]
+    then
+      curl -X POST -H 'Content-type: application/json' --data '{
+        "icon_url": "https://s3.amazonaws.com/voiceit-api2-testing-files/test-data/TravisCI-Mascot-1.png",
+        "username": "Release Wrapper Gate",
+          "attachments": [
+              {
+                  "text": "Pushing '$reponame' version '$version' to Github Release failed.",
+                  "color": "danger"
+              }
+          ]
+      }' 'https://hooks.slack.com/services/'$SLACKPARAM1'/'$SLACKPARAM2'/'$SLACKPARAM3
+      exit 1
+    fi
+
+
     curl -X POST -H 'Content-type: application/json' --data '{
       "icon_url": "https://s3.amazonaws.com/voiceit-api2-testing-files/test-data/TravisCI-Mascot-1.png",
       "username": "Release Wrapper Gate",
