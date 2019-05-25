@@ -220,6 +220,68 @@ impl VoiceIt2 {
         Ok(body)
     }
 
+    pub fn get_all_groups(&self) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/groups{}",
+            String::from(BASE_URL),
+            self.notification_url_parameter
+        );
+
+        let mut response = Client::new()
+            .get(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
+    pub fn get_group(&self, group_id: &str) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/groups/{}{}",
+            String::from(BASE_URL),
+            String::from(group_id),
+            self.notification_url_parameter
+        );
+
+        let mut response = Client::new()
+            .get(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
+    pub fn check_group_exists(&self, group_id: &str) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/groups/{}/exists{}",
+            String::from(BASE_URL),
+            String::from(group_id),
+            self.notification_url_parameter
+        );
+
+        let mut response = Client::new()
+            .get(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
     pub fn add_user_to_group(&self, group_id: &str, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/groups/addUser{}",

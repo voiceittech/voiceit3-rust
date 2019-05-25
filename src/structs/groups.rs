@@ -5,7 +5,6 @@ use serde::{Deserialize, Serialize};
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Group {
     pub createdAt: u64,
-    pub description: String,
     pub groupId: String,
     pub users: Vec<String>,
     pub userCount: u64,
@@ -25,8 +24,6 @@ pub struct GetAllGroupsReturn {
 pub struct GetGroupReturn {
     pub message: String,
     pub description: String,
-    pub groupId: String,
-    pub createdAt: u64,
     pub users: Vec<String>,
     pub userCount: u64,
     pub status: u16,

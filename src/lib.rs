@@ -145,6 +145,36 @@ mod tests {
         assert!(crate::is_group_id(&group_id));
         assert_eq!(result.responseCode, "SUCC");
 
+        let result: crate::structs::groups::GetAllGroupsReturn = match &x.get_all_groups() {
+                Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
+        assert_eq!(result.status, 200);
+        assert_eq!(result.responseCode, "SUCC");
+
+        let result: crate::structs::groups::GetGroupReturn = match &x.get_group(&group_id) {
+                Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
+        assert_eq!(result.status, 200);
+        assert_eq!(result.responseCode, "SUCC");
+
+        let result: crate::structs::groups::CheckGroupExistsReturn = match &x.check_group_exists(&group_id) {
+                Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
+        assert_eq!(result.status, 200);
+        assert_eq!(result.responseCode, "SUCC");
+
         let result: crate::structs::groups::AddUserToGroupReturn = match &x.add_user_to_group(&group_id, &user_id) {
                 Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
                 Err(err) => {
