@@ -60,7 +60,7 @@ pub struct CreateUserTokenReturn {
     pub status: u16,
     pub timeTaken: String,
     pub userToken: String,
-    pub createdAt: String,
+    pub createdAt: u64,
     pub responseCode: String,
 }
 
