@@ -195,6 +195,125 @@ impl VoiceIt2 {
         Ok(body)
     }
 
+    // SUBACCOUNTS
+    pub fn create_managed_sub_account(
+        &self,
+        first_name: &str,
+        last_name: &str,
+        email: &str,
+        password: &str,
+        content_language: &str,
+    ) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/subaccount/managed{}",
+            String::from(BASE_URL),
+            self.notification_url_parameter
+        );
+
+        let form = multipart::Form::new()
+            .text("firstName", String::from(first_name))
+            .text("lastName", String::from(last_name))
+            .text("email", String::from(email))
+            .text("password", String::from(password))
+            .text("contentLanguage", String::from(content_language));
+
+        let mut response = Client::new()
+            .post(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .multipart(form)
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
+    pub fn create_unmanaged_sub_account(
+        &self,
+        first_name: &str,
+        last_name: &str,
+        email: &str,
+        password: &str,
+        content_language: &str,
+    ) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/subaccount/unmanaged{}",
+            String::from(BASE_URL),
+            self.notification_url_parameter
+        );
+
+        let form = multipart::Form::new()
+            .text("firstName", String::from(first_name))
+            .text("lastName", String::from(last_name))
+            .text("email", String::from(email))
+            .text("password", String::from(password))
+            .text("contentLanguage", String::from(content_language));
+
+        let mut response = Client::new()
+            .post(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .multipart(form)
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
+    pub fn regenerate_sub_account_api_token(
+        &self,
+        sub_account_api_key: &str,
+    ) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/subaccount/{}{}",
+            String::from(BASE_URL),
+            String::from(sub_account_api_key),
+            self.notification_url_parameter
+        );
+
+        let mut response = Client::new()
+            .post(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
+    pub fn delete_subaccount(
+        &self,
+        sub_account_api_key: &str,
+    ) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/subaccount/{}{}",
+            String::from(BASE_URL),
+            String::from(sub_account_api_key),
+            self.notification_url_parameter
+        );
+
+        let mut response = Client::new()
+            .delete(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
     // GROUPS
 
     pub fn create_group(&self, description: &str) -> Result<String, VoiceItError> {
