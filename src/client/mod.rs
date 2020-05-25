@@ -268,7 +268,7 @@ impl VoiceIt2 {
 
     pub fn switch_sub_account_type(&self, sub_account_api_key: &str) -> Result<String, VoiceItError> {
         let url = format!(
-            "{}/subaccount/{}//switchType{}",
+            "{}/subaccount/{}/switchType{}",
             String::from(BASE_URL),
             String::from(sub_account_api_key),
             self.notification_url_parameter
