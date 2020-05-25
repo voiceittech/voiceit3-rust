@@ -37,5 +37,4 @@ pub struct SwitchSubAccountTypeReturn {
     pub status: u16,
     pub timeTaken: String,
     pub responseCode: String,
-    pub type: String,
 }
