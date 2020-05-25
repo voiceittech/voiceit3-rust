@@ -319,6 +319,16 @@ mod tests {
         assert!(crate::is_api_key(&sub_account_unmanaged_api_key));
         assert_eq!(result.responseCode, "SUCC");
 
+        let result: crate::structs::subaccounts::SwitchSubAccountTypeReturn = match &x.switch_sub_account_type(&sub_account_unmanaged_api_key) {
+            Ok(x) => serde_json::from_str(&x).expect(&x),
+            Err(err) => {
+                panic!("Panic error: {:?}", err);
+            }
+        };
+    
+        assert_eq!(result.status, 200);
+        assert_eq!(result.responseCode, "SUCC");
+
         let result: crate::structs::subaccounts::RegenerateSubAccountAPITokenReturn = match &x.regenerate_sub_account_api_token(&sub_account_managed_api_key) {
             Ok(x) => serde_json::from_str(&x).expect(&x),
             Err(err) => {

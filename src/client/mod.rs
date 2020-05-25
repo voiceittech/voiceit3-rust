@@ -266,6 +266,27 @@ impl VoiceIt2 {
         Ok(body)
     }
 
+    pub fn switch_sub_account_type(&self, sub_account_api_key: &str) -> Result<String, VoiceItError> {
+        let url = format!(
+            "{}/subaccount/{}//switchType{}",
+            String::from(BASE_URL),
+            String::from(sub_account_api_key),
+            self.notification_url_parameter
+        );
+
+        let mut response = Client::new()
+            .post(&url)
+            .header("platformId", PLATFORM_ID)
+            .header("platformVersion", PLATFORM_VERSION)
+            .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
+            .send()?;
+
+        let mut body = String::new();
+        response.read_to_string(&mut body)?;
+
+        Ok(body)
+    }
+
     pub fn regenerate_sub_account_api_token(
         &self,
         sub_account_api_key: &str,
