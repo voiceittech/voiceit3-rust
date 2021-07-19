@@ -266,7 +266,10 @@ impl VoiceIt2 {
         Ok(body)
     }
 
-    pub fn switch_sub_account_type(&self, sub_account_api_key: &str) -> Result<String, VoiceItError> {
+    pub fn switch_sub_account_type(
+        &self,
+        sub_account_api_key: &str,
+    ) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/subaccount/{}/switchType{}",
             String::from(BASE_URL),
@@ -311,10 +314,7 @@ impl VoiceIt2 {
         Ok(body)
     }
 
-    pub fn delete_subaccount(
-        &self,
-        sub_account_api_key: &str,
-    ) -> Result<String, VoiceItError> {
+    pub fn delete_subaccount(&self, sub_account_api_key: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/subaccount/{}{}",
             String::from(BASE_URL),

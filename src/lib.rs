@@ -42,9 +42,8 @@ use structs::verification::{
 
 #[allow(unused_imports)]
 use structs::subaccounts::{
-    CreateSubAccountReturn,RegenerateSubAccountAPITokenReturn,DeleteSubAccountReturn,
+    CreateSubAccountReturn, DeleteSubAccountReturn, RegenerateSubAccountAPITokenReturn,
 };
-
 
 use regex::Regex;
 use std::fs::File;
@@ -279,7 +278,7 @@ mod tests {
     }
 
     #[test]
-    fn test_subaccounts(){
+    fn test_subaccounts() {
         let env = std::env::var("BOXFUSE_ENV").unwrap();
         if env == "voiceittest" {
             let home_dir = std::env::var("HOME").unwrap();
@@ -295,67 +294,73 @@ mod tests {
             std::env::var("VIAPITOKEN").unwrap(),
         );
 
-        let result: crate::structs::subaccounts::CreateSubAccountReturn = match &x.create_managed_sub_account("test", "rust", "", "", "") {
-            Ok(x) => serde_json::from_str(&x).expect(&x),
-            Err(err) => {
-                panic!("Panic error: {:?}", err);
-            }
-        };
-    
+        let result: crate::structs::subaccounts::CreateSubAccountReturn =
+            match &x.create_managed_sub_account("test", "rust", "", "", "") {
+                Ok(x) => serde_json::from_str(&x).expect(&x),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
         assert_eq!(result.status, 201);
         let sub_account_managed_api_key = result.apiKey;
         assert!(crate::is_api_key(&sub_account_managed_api_key));
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::subaccounts::CreateSubAccountReturn = match &x.create_unmanaged_sub_account("test", "rust", "", "", "") {
-            Ok(x) => serde_json::from_str(&x).expect(&x),
-            Err(err) => {
-                panic!("Panic error: {:?}", err);
-            }
-        };
-    
+        let result: crate::structs::subaccounts::CreateSubAccountReturn =
+            match &x.create_unmanaged_sub_account("test", "rust", "", "", "") {
+                Ok(x) => serde_json::from_str(&x).expect(&x),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
         assert_eq!(result.status, 201);
         let sub_account_unmanaged_api_key = result.apiKey;
         assert!(crate::is_api_key(&sub_account_unmanaged_api_key));
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::subaccounts::SwitchSubAccountTypeReturn = match &x.switch_sub_account_type(&sub_account_unmanaged_api_key) {
-            Ok(x) => serde_json::from_str(&x).expect(&x),
-            Err(err) => {
-                panic!("Panic error: {:?}", err);
-            }
-        };
-    
+        let result: crate::structs::subaccounts::SwitchSubAccountTypeReturn =
+            match &x.switch_sub_account_type(&sub_account_unmanaged_api_key) {
+                Ok(x) => serde_json::from_str(&x).expect(&x),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::subaccounts::RegenerateSubAccountAPITokenReturn = match &x.regenerate_sub_account_api_token(&sub_account_managed_api_key) {
-            Ok(x) => serde_json::from_str(&x).expect(&x),
-            Err(err) => {
-                panic!("Panic error: {:?}", err);
-            }
-        };
-    
+        let result: crate::structs::subaccounts::RegenerateSubAccountAPITokenReturn =
+            match &x.regenerate_sub_account_api_token(&sub_account_managed_api_key) {
+                Ok(x) => serde_json::from_str(&x).expect(&x),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::subaccounts::DeleteSubAccountReturn = match &x.delete_subaccount(&sub_account_managed_api_key) {
-            Ok(x) => serde_json::from_str(&x).expect(&x),
-            Err(err) => {
-                panic!("Panic error: {:?}", err);
-            }
-        };
-    
+        let result: crate::structs::subaccounts::DeleteSubAccountReturn =
+            match &x.delete_subaccount(&sub_account_managed_api_key) {
+                Ok(x) => serde_json::from_str(&x).expect(&x),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::subaccounts::DeleteSubAccountReturn = match &x.delete_subaccount(&sub_account_unmanaged_api_key) {
-            Ok(x) => serde_json::from_str(&x).expect(&x),
-            Err(err) => {
-                panic!("Panic error: {:?}", err);
-            }
-        };
-    
+        let result: crate::structs::subaccounts::DeleteSubAccountReturn =
+            match &x.delete_subaccount(&sub_account_unmanaged_api_key) {
+                Ok(x) => serde_json::from_str(&x).expect(&x),
+                Err(err) => {
+                    panic!("Panic error: {:?}", err);
+                }
+            };
+
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
     }
