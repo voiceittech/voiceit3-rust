@@ -1,6 +1,6 @@
 <img src="./rust.png" width="100%" style="width:100%" />
 
-# VoiceIt2-Rust [![travis](https://travis-ci.com/voiceittech/VoiceIt2-Rust.svg?branch=master)](https://travis-ci.com/voiceittech/VoiceIt2-Rust) [![version](https://img.shields.io/crates/v/voiceit2)](https://crates.io/crates/voiceit2) [![downloads](https://img.shields.io/crates/d/voiceit2)](https://crates.io/crates/voiceit2) ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
+# VoiceIt2-Rust [![travis](https://app.travis-ci.com/voiceittech/VoiceIt2-Rust.svg?branch=master)](https://app.travis-ci.com/github/voiceittech/VoiceIt2-Rust) [![version](https://img.shields.io/crates/v/voiceit2)](https://crates.io/crates/voiceit2) [![downloads](https://img.shields.io/crates/d/voiceit2)](https://crates.io/crates/voiceit2) ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 A Rust wrapper for VoiceIt's API 2.0 featuring Voice + Face Verification and Identification.
 
