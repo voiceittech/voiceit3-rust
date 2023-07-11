@@ -70,7 +70,7 @@ fn is_api_key(text: &str) -> bool {
 }
 
 fn download_file(link: &str) -> Result<(), Box<dyn std::error::Error>> {
-    let mut response = reqwest::get(link)?;
+    let mut response = reqwest::blocking::get(link)?;
 
     let mut dest = {
         let fname = response

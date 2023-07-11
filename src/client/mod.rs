@@ -4,8 +4,8 @@ extern crate reqwest;
 extern crate url;
 
 pub use crate::errors::VoiceItError;
-use reqwest::multipart;
-pub use reqwest::Client;
+use reqwest::blocking::multipart;
+pub use reqwest::blocking::Client;
 pub use std::io::Read;
 use url::form_urlencoded;
 
