@@ -3,7 +3,7 @@ name = "voiceit2"
 version = "0.5.0"
 authors = ["gilgameshskytrooper <me@gilgameshskytrooper.io>"]
 description = """
-A Rust wrapper for VoiceIt's API 2.0 featuring Voice + Face Verification and Identification.
+A Rust wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
 """
 documentation = "https://api.voiceit.io/?rust"
 homepage = "https://voiceit.io"
