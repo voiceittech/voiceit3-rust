@@ -105,7 +105,7 @@ mod tests {
             .expect("Unable to write platformVersion file");
         }
 
-        let mut x = crate::client::VoiceIt2::new(
+        let mut x = crate::client::VoiceIt3::new(
             std::env::var("VIAPIKEY").unwrap(),
             std::env::var("VIAPITOKEN").unwrap(),
         );
@@ -289,7 +289,7 @@ mod tests {
             .expect("Unable to write platformVersion file");
         }
 
-        let x = crate::client::VoiceIt2::new(
+        let x = crate::client::VoiceIt3::new(
             std::env::var("VIAPIKEY").unwrap(),
             std::env::var("VIAPITOKEN").unwrap(),
         );
@@ -367,7 +367,7 @@ mod tests {
         crate::download_file("https://drive.voiceit.io/files/verificationA1.wav").unwrap();
 
         let pwd = std::env::var("PWD").unwrap();
-        let x = crate::client::VoiceIt2::new(
+        let x = crate::client::VoiceIt3::new(
             std::env::var("VIAPIKEY").unwrap(),
             std::env::var("VIAPITOKEN").unwrap(),
         );
@@ -580,7 +580,7 @@ mod tests {
 
         let pwd = std::env::var("PWD").unwrap();
 
-        let x = crate::client::VoiceIt2::new(
+        let x = crate::client::VoiceIt3::new(
             std::env::var("VIAPIKEY").unwrap(),
             std::env::var("VIAPITOKEN").unwrap(),
         );
@@ -789,7 +789,7 @@ mod tests {
 
         let pwd = std::env::var("PWD").unwrap();
 
-        let x = crate::client::VoiceIt2::new(
+        let x = crate::client::VoiceIt3::new(
             std::env::var("VIAPIKEY").unwrap(),
             std::env::var("VIAPITOKEN").unwrap(),
         );
