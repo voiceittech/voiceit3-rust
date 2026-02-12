@@ -31,10 +31,3 @@ pub struct DeleteSubAccountReturn {
     pub responseCode: String,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-pub struct SwitchSubAccountTypeReturn {
-    pub message: String,
-    pub status: u16,
-    pub timeTaken: String,
-    pub responseCode: String,
-}
