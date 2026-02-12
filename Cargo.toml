@@ -7,7 +7,7 @@ A Rust wrapper for VoiceIt's API 2.0 featuring Voice + Face Verification and Ide
 """
 documentation = "https://api.voiceit.io/?rust"
 homepage = "https://voiceit.io"
-repository = "https://github.com/voiceittech/VoiceIt2-Rust"
+repository = "https://github.com/voiceittech/VoiceIt3-Rust"
 readme = "README.md"
 keywords = ["biometrics", "voice", "face-recognition", "voice-recognition", "voiceit"]
 license = "MIT"
