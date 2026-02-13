@@ -271,10 +271,10 @@ mod tests {
         &x.add_notification_url("https://voiceit.io");
         assert_eq!(
             &x.get_base_url(),
-            "https://qpi.voiceit.io?notificationURL=https%3A%2F%2Fvoiceit.io"
+            "https://api.voiceit.io?notificationURL=https%3A%2F%2Fvoiceit.io"
         );
         &x.remove_notification_url();
-        assert_eq!(&x.get_base_url(), "https://qpi.voiceit.io");
+        assert_eq!(&x.get_base_url(), "https://api.voiceit.io");
     }
 
     #[test]

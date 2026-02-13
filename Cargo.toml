@@ -5,7 +5,7 @@ authors = ["gilgameshskytrooper <me@gilgameshskytrooper.io>"]
 description = """
 A Rust wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
 """
-documentation = "https://qpi.voiceit.io/?rust"
+documentation = "https://api.voiceit.io/?rust"
 homepage = "https://voiceit.io"
 repository = "https://github.com/voiceittech/VoiceIt3-Rust"
 readme = "README.md"

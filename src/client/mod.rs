@@ -25,7 +25,7 @@ impl VoiceIt3 {
             api_key: api_key,
             api_token: api_token,
             notification_url_parameter: String::from(""),
-            base_url: String::from("https://qpi.voiceit.io"),
+            base_url: String::from("https://api.voiceit.io"),
         }
     }
 

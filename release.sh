@@ -134,7 +134,7 @@ then
         formattedmessages=$formattedmessages'|'$i
       done
 
-      curl -X POST -H "X-Admin-Password: $EMAILAUTHPASS" --data-urlencode "messages=$formattedmessages" -d "packageManaged=docs" --data-urlencode "instructions=https://qpi.voiceit.io/?rust#introduction" "https://qpi.voiceit.io/platform/49"
+      curl -X POST -H "X-Admin-Password: $EMAILAUTHPASS" --data-urlencode "messages=$formattedmessages" -d "packageManaged=docs" --data-urlencode "instructions=https://api.voiceit.io/?rust#introduction" "https://api.voiceit.io/platform/49"
     fi
     exit 0
 
