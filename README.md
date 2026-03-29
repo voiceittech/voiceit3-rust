@@ -1,6 +1,5 @@
 <img src="./rust.png" width="100%" style="width:100%" />
 
-# VoiceIt3-Rust [![CI](https://github.com/voiceittech/VoiceIt3-Rust/actions/workflows/ci.yml/badge.svg)](https://github.com/voiceittech/VoiceIt3-Rust/actions/workflows/ci.yml) [![version](https://img.shields.io/crates/v/voiceit3)](https://crates.io/crates/voiceit3) [![downloads](https://img.shields.io/crates/d/voiceit3)](https://crates.io/crates/voiceit3) ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 A Rust wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
 
@@ -13,7 +12,7 @@ You can visit our [HTTP API 3.0 Documentation](https://api.voiceit.io/?rust#intr
 
 ## Support
 
-Contact us with any questions at support@voiceit.io
+Contact us with any questions at support@voiceit.tech
 
 ## License
 
