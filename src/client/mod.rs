@@ -428,7 +428,7 @@ impl VoiceIt3 {
             .text("groupId", String::from(group_id));
 
         let mut response = Client::new()
-            .put(&url)
+            .delete(&url)
             .header("platformId", PLATFORM_ID)
             .header("platformVersion", PLATFORM_VERSION)
             .basic_auth(self.api_key.clone(), Some(self.api_token.clone()))
