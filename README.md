@@ -15,6 +15,8 @@ voiceit3 = { git = "https://github.com/voiceittech/VoiceIt3-Rust.git" }
 
 Sign up at [voiceit.io/pricing](https://voiceit.io/pricing) to get your API Key and Token, then log in to the [Dashboard](https://dashboard.voiceit.io) to manage your account.
 
+<img src="./Graphics/getcredentials.png" alt="API Key and Token" width="400px" />
+
 ## API calls
 You can visit our [HTTP API 3.0 Documentation](https://api.voiceit.io/?rust#introduction) for detailed information on each API call.
 
