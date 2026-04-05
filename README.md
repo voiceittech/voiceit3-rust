@@ -1,5 +1,6 @@
 <img src="./rust.png" width="100%" style="width:100%" />
 
+[![API Test](https://github.com/voiceittech/VoiceIt3-Rust/actions/workflows/test.yml/badge.svg)](https://github.com/voiceittech/VoiceIt3-Rust/actions/workflows/test.yml)
 [![Version](https://img.shields.io/badge/version-0.5.1-blue)](https://github.com/voiceittech/VoiceIt3-Rust)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/voiceittech/VoiceIt3-Rust/blob/main/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Rust-lightgrey)](https://github.com/voiceittech/VoiceIt3-Rust)
