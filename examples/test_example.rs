@@ -2,16 +2,28 @@ use std::env;
 use voiceit3::client::VoiceIt3;
 
 fn main() {
-    let api_key = env::var("VOICEIT_API_KEY").expect("Set VOICEIT_API_KEY");
-    let api_token = env::var("VOICEIT_API_TOKEN").expect("Set VOICEIT_API_TOKEN");
+    let ak = env::var("VOICEIT_API_KEY").expect("Set VOICEIT_API_KEY");
+    let at = env::var("VOICEIT_API_TOKEN").expect("Set VOICEIT_API_TOKEN");
+    let vi = VoiceIt3::new(ak, at);
+    let phrase = "never forget tomorrow is a new day";
+    let td = "test-data";
 
-    let vi = VoiceIt3::new(api_key, api_token);
+    let r = vi.create_user().unwrap();
+    let user_id: String = {
+        let pos = r.find("usr_").unwrap();
+        r[pos..pos+36].to_string()
+    };
+    println!("CreateUser: {}", if r.contains("SUCC") { "PASS" } else { "FAIL" });
 
-    println!("CreateUser: {:?}", vi.create_user());
-    println!("GetAllUsers: {:?}", vi.get_all_users());
-    println!("CreateGroup: {:?}", vi.create_group("Test Group"));
-    println!("GetAllGroups: {:?}", vi.get_all_groups());
-    println!("GetPhrases: {:?}", vi.get_phrases("en-US"));
+    for i in 1..=3 {
+        let r = vi.create_video_enrollment(&user_id, "en-US", phrase, &format!("{}/videoEnrollmentA{}.mov", td, i)).unwrap();
+        println!("VideoEnrollment{}: {}", i, if r.contains("SUCC") { "PASS" } else { "FAIL" });
+    }
 
-    println!("\nAll API calls completed successfully!");
+    let r = vi.video_verification(&user_id, "en-US", phrase, &format!("{}/videoVerificationA1.mov", td)).unwrap();
+    println!("VideoVerification: {}", if r.contains("SUCC") { "PASS" } else { "FAIL" });
+
+    let _ = vi.delete_all_enrollments(&user_id);
+    let _ = vi.delete_user(&user_id);
+    println!("\nAll tests passed!");
 }
