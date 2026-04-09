@@ -1,10 +1,10 @@
 <img src="./rust.png" width="100%" style="width:100%" />
 
-[![API Test](https://github.com/voiceittech/VoiceIt3-Rust/actions/workflows/test.yml/badge.svg)](https://github.com/voiceittech/VoiceIt3-Rust/actions/workflows/test.yml)
-[![Dependabot](https://img.shields.io/github/issues-pr/voiceittech/VoiceIt3-Rust/dependencies?label=dependabot&logo=dependabot&color=025e8c)](https://github.com/voiceittech/VoiceIt3-Rust/pulls?q=is%3Apr+label%3Adependencies)
-[![Version](https://img.shields.io/badge/version-0.5.1-blue)](https://github.com/voiceittech/VoiceIt3-Rust)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/voiceittech/VoiceIt3-Rust/blob/main/LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Rust-lightgrey)](https://github.com/voiceittech/VoiceIt3-Rust)
+[![API Test](https://github.com/voiceittech/voiceit3-rust/actions/workflows/test.yml/badge.svg)](https://github.com/voiceittech/voiceit3-rust/actions/workflows/test.yml)
+[![Dependabot](https://img.shields.io/github/issues-pr/voiceittech/voiceit3-rust/dependencies?label=dependabot&logo=dependabot&color=025e8c)](https://github.com/voiceittech/voiceit3-rust/pulls?q=is%3Apr+label%3Adependencies)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue)](https://github.com/voiceittech/voiceit3-rust)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://github.com/voiceittech/voiceit3-rust/blob/main/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Rust-lightgrey)](https://github.com/voiceittech/voiceit3-rust)
 [![VoiceIt API](https://img.shields.io/badge/VoiceIt-API%203.0-blue)](https://voiceit.io)
 
 
@@ -15,7 +15,7 @@ A Rust wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Ide
 Add to your `Cargo.toml`:
 ```toml
 [dependencies]
-voiceit3 = { git = "https://github.com/voiceittech/VoiceIt3-Rust.git" }
+voiceit3 = { git = "https://github.com/voiceittech/voiceit3-rust.git" }
 ```
 
 ## Getting Started
@@ -30,7 +30,7 @@ You can visit our [HTTP API 3.0 Documentation](https://voiceit.io/documentation)
 
 If you find this SDK useful, please consider giving it a star on GitHub — it helps others discover the project!
 
-[![GitHub stars](https://img.shields.io/github/stars/voiceittech/VoiceIt3-Rust?style=social)](https://github.com/voiceittech/VoiceIt3-Rust/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/voiceittech/voiceit3-rust?style=social)](https://github.com/voiceittech/voiceit3-rust/stargazers)
 
 ## License
 
