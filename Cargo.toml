@@ -1,6 +1,6 @@
 [package]
 name = "voiceit3"
-version = "3.0.0"
+version = "3.0.2"
 authors = ["gilgameshskytrooper <me@gilgameshskytrooper.io>"]
 description = """
 A Rust wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
