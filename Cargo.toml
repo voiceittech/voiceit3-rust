@@ -1,13 +1,13 @@
 [package]
 name = "voiceit3"
-version = "0.5.0"
+version = "3.0.0"
 authors = ["gilgameshskytrooper <me@gilgameshskytrooper.io>"]
 description = """
 A Rust wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
 """
 documentation = "https://api.voiceit.io/?rust"
 homepage = "https://voiceit.io"
-repository = "https://github.com/voiceittech/VoiceIt3-Rust"
+repository = "https://github.com/voiceittech/voiceit3-rust"
 readme = "README.md"
 keywords = ["biometrics", "voice", "face-recognition", "voice-recognition", "voiceit"]
 license = "MIT"
