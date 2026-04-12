@@ -425,7 +425,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/enrollmentA1.wav", &pwd).as_str()) {
+        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/enrollmentA1.wav", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -435,7 +435,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/enrollmentA2.wav", &pwd).as_str()) {
+        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/enrollmentA2.wav", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -445,7 +445,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/enrollmentA3.wav", &pwd).as_str()) {
+        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/enrollmentA3.wav", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -455,7 +455,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment_by_url(&user_id2, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentC1.wav") {
+        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment_by_url(&user_id2, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentC1.wav") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -465,7 +465,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment_by_url(&user_id2, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentC2.wav") {
+        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment_by_url(&user_id2, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentC2.wav") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -475,7 +475,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment_by_url(&user_id2, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentC3.wav") {
+        let result: crate::structs::enrollments::CreateVoiceEnrollmentReturn = match &x.create_voice_enrollment_by_url(&user_id2, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentC3.wav") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -495,7 +495,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::verification::VoiceVerificationReturn = match &x.voice_verification(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/verificationA1.wav", &pwd).as_str()) {
+        let result: crate::structs::verification::VoiceVerificationReturn = match &x.voice_verification(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/verificationA1.wav", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -505,7 +505,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::verification::VoiceVerificationReturn = match &x.voice_verification_by_url(&user_id1, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentA4.wav") {
+        let result: crate::structs::verification::VoiceVerificationReturn = match &x.voice_verification_by_url(&user_id1, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentA4.wav") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -515,7 +515,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::identification::VoiceIdentificationReturn = match &x.voice_identification(&group_id, "en-US", "never forget tomorrow is a new day", format!("{}/verificationA1.wav", &pwd).as_str()) {
+        let result: crate::structs::identification::VoiceIdentificationReturn = match &x.voice_identification(&group_id, "en-US", "Never forget tomorrow is a new day", format!("{}/verificationA1.wav", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -526,7 +526,7 @@ mod tests {
         assert_eq!(result.userId, user_id1);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::identification::VoiceIdentificationReturn = match &x.voice_identification_by_url(&group_id, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentA4.wav") {
+        let result: crate::structs::identification::VoiceIdentificationReturn = match &x.voice_identification_by_url(&group_id, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/enrollmentA4.wav") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -847,7 +847,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/videoEnrollmentB1.mov", &pwd).as_str()) {
+        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/videoEnrollmentB1.mov", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -857,7 +857,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/videoEnrollmentB2.mov", &pwd).as_str()) {
+        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/videoEnrollmentB2.mov", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -867,7 +867,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/videoEnrollmentB3.mov", &pwd).as_str()) {
+        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/videoEnrollmentB3.mov", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -877,7 +877,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment_by_url(&user_id2, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoEnrollmentC1.mov") {
+        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment_by_url(&user_id2, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoEnrollmentC1.mov") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -887,7 +887,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment_by_url(&user_id2, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoEnrollmentC2.mov") {
+        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment_by_url(&user_id2, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoEnrollmentC2.mov") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -897,7 +897,7 @@ mod tests {
         assert_eq!(result.status, 201);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment_by_url(&user_id2, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoEnrollmentC3.mov") {
+        let result: crate::structs::enrollments::CreateVideoEnrollmentReturn = match &x.create_video_enrollment_by_url(&user_id2, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoEnrollmentC3.mov") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -917,7 +917,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::verification::VideoVerificationReturn = match &x.video_verification(&user_id1, "en-US", "never forget tomorrow is a new day", format!("{}/videoVerificationB1.mov", &pwd).as_str()) {
+        let result: crate::structs::verification::VideoVerificationReturn = match &x.video_verification(&user_id1, "en-US", "Never forget tomorrow is a new day", format!("{}/videoVerificationB1.mov", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -927,7 +927,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::verification::VideoVerificationReturn = match &x.video_verification_by_url(&user_id1, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoVerificationB1.mov") {
+        let result: crate::structs::verification::VideoVerificationReturn = match &x.video_verification_by_url(&user_id1, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoVerificationB1.mov") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -937,7 +937,7 @@ mod tests {
         assert_eq!(result.status, 200);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::identification::VideoIdentificationReturn = match &x.video_identification(&group_id, "en-US", "never forget tomorrow is a new day", format!("{}/videoVerificationB1.mov", &pwd).as_str()) {
+        let result: crate::structs::identification::VideoIdentificationReturn = match &x.video_identification(&group_id, "en-US", "Never forget tomorrow is a new day", format!("{}/videoVerificationB1.mov", &pwd).as_str()) {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
@@ -948,7 +948,7 @@ mod tests {
         assert_eq!(result.userId, user_id1);
         assert_eq!(result.responseCode, "SUCC");
 
-        let result: crate::structs::identification::VideoIdentificationReturn = match &x.video_identification_by_url(&group_id, "en-US", "never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoVerificationB1.mov") {
+        let result: crate::structs::identification::VideoIdentificationReturn = match &x.video_identification_by_url(&group_id, "en-US", "Never forget tomorrow is a new day", "https://drive.voiceit.io/files/videoVerificationB1.mov") {
             Ok(x) => serde_json::from_str(&x).expect(format!("Unable to unmarshal JSON properly due to call failing and returning with missing values. server response: {}", &x).as_str()),
             Err(err) => {
                 panic!("Panic error: {:?}", err);
