@@ -91,7 +91,7 @@ impl VoiceIt3 {
     pub fn check_user_exists(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/users/{}{}",
-            self.base_url, user_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(user_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -110,7 +110,7 @@ impl VoiceIt3 {
     pub fn delete_user(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/users/{}{}",
-            self.base_url, user_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(user_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -129,7 +129,7 @@ impl VoiceIt3 {
     pub fn get_groups_for_user(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/users/{}/groups{}",
-            self.base_url, user_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(user_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -153,7 +153,7 @@ impl VoiceIt3 {
         let url = format!(
             "{}/users/{}/token?timeOut={}",
             self.base_url,
-            user_id,
+            urlencoding::encode(user_id),
             expiration_time_seconds.to_string(),
         );
 
@@ -173,7 +173,7 @@ impl VoiceIt3 {
     pub fn expire_user_tokens(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/users/{}/expireTokens{}",
-            self.base_url, user_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(user_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -266,7 +266,7 @@ impl VoiceIt3 {
         let url = format!(
             "{}/subaccount/{}{}",
             self.base_url,
-            String::from(sub_account_api_key),
+            urlencoding::encode(sub_account_api_key),
             self.notification_url_parameter
         );
 
@@ -287,7 +287,7 @@ impl VoiceIt3 {
         let url = format!(
             "{}/subaccount/{}{}",
             self.base_url,
-            String::from(sub_account_api_key),
+            urlencoding::encode(sub_account_api_key),
             self.notification_url_parameter
         );
 
@@ -351,7 +351,7 @@ impl VoiceIt3 {
         let url = format!(
             "{}/groups/{}{}",
             self.base_url,
-            String::from(group_id),
+            urlencoding::encode(group_id),
             self.notification_url_parameter
         );
 
@@ -372,7 +372,7 @@ impl VoiceIt3 {
         let url = format!(
             "{}/groups/{}/exists{}",
             self.base_url,
-            String::from(group_id),
+            urlencoding::encode(group_id),
             self.notification_url_parameter
         );
 
@@ -444,7 +444,7 @@ impl VoiceIt3 {
     pub fn delete_group(&self, group_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/groups/{}{}",
-            self.base_url, group_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(group_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -465,7 +465,7 @@ impl VoiceIt3 {
     pub fn get_phrases(&self, content_language: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/phrases/{}{}",
-            self.base_url, content_language, self.notification_url_parameter
+            self.base_url, urlencoding::encode(content_language), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -485,7 +485,7 @@ impl VoiceIt3 {
         let url = format!(
             "{}/enrollments/{}/all{}",
             self.base_url,
-            String::from(user_id),
+            urlencoding::encode(user_id),
             self.notification_url_parameter
         );
 
@@ -505,7 +505,7 @@ impl VoiceIt3 {
     pub fn get_all_voice_enrollments(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/enrollments/voice/{}{}",
-            self.base_url, user_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(user_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -719,7 +719,7 @@ impl VoiceIt3 {
     pub fn get_all_face_enrollments(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/enrollments/face/{}{}",
-            self.base_url, user_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(user_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
@@ -909,7 +909,7 @@ impl VoiceIt3 {
     pub fn get_all_video_enrollments(&self, user_id: &str) -> Result<String, VoiceItError> {
         let url = format!(
             "{}/enrollments/video/{}{}",
-            self.base_url, user_id, self.notification_url_parameter
+            self.base_url, urlencoding::encode(user_id), self.notification_url_parameter
         );
 
         let mut response = Client::new()
