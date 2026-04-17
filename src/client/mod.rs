@@ -9,7 +9,7 @@ pub use reqwest::blocking::Client;
 pub use std::io::Read;
 use url::form_urlencoded;
 
-static PLATFORM_ID: &'static str = "49";
+static PLATFORM_ID: &'static str = "48";
 pub static PLATFORM_VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
 pub struct VoiceIt3 {
