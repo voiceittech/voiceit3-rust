@@ -11,7 +11,7 @@ repository = "https://github.com/voiceittech/voiceit3-rust"
 readme = "README.md"
 keywords = ["biometrics", "voice", "face-recognition", "voice-recognition", "voiceit"]
 license = "MIT"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 reqwest = { version = "0.13.2", default-features = false, features = ["rustls", "blocking", "multipart"] }
