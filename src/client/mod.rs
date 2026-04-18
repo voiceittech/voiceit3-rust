@@ -12,16 +12,16 @@ use url::form_urlencoded;
 static PLATFORM_ID: &'static str = "48";
 pub static PLATFORM_VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
-pub struct VoiceIt3 {
+pub struct voiceit3 {
     api_key: String,
     api_token: String,
     base_url: String,
     notification_url_parameter: String,
 }
 
-impl VoiceIt3 {
-    pub fn new(api_key: String, api_token: String) -> VoiceIt3 {
-        VoiceIt3 {
+impl voiceit3 {
+    pub fn new(api_key: String, api_token: String) -> voiceit3 {
+        voiceit3 {
             api_key: api_key,
             api_token: api_token,
             notification_url_parameter: String::from(""),
@@ -29,8 +29,8 @@ impl VoiceIt3 {
         }
     }
 
-    pub fn new_custom(api_key: String, api_token: String, custom_url: String) -> VoiceIt3 {
-        VoiceIt3 {
+    pub fn new_custom(api_key: String, api_token: String, custom_url: String) -> voiceit3 {
+        voiceit3 {
             api_key: api_key,
             api_token: api_token,
             notification_url_parameter: String::from(""),

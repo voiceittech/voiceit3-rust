@@ -1,10 +1,10 @@
 use std::env;
-use voiceit3::client::VoiceIt3;
+use voiceit3::client::voiceit3;
 
 fn main() {
     let ak = env::var("VOICEIT_API_KEY").expect("Set VOICEIT_API_KEY");
     let at = env::var("VOICEIT_API_TOKEN").expect("Set VOICEIT_API_TOKEN");
-    let vi = VoiceIt3::new(ak, at);
+    let vi = voiceit3::new(ak, at);
     let phrase = "Never forget tomorrow is a new day";
     let td = "test-data";
 
